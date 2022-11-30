@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaration vs, expression</title>
+    <style>
+        .content {
+            width: 600px;
+            margin: auto;
+        }
+        h1 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        li {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            list-style-type: georgian;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        h3 {
+            font-family: 'comic sans ms';
+        }
+
+        p {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Function Declaration</h1>
+        <ul>
+            <li>
+                Lebih fleksibel (dapat ditulis dimanapun)
+                <ul>  <li>karena konsep <i><b>Hoisting</b></i></li></ul>
+              
+            </li>
+            <li>Mudah dipahami pemula</li>
+
+        </ul>
+        <h2>Contoh</h2>
+        <h3>Benar</h3>
+        <p style="color: rgb(14, 14, 212);">  Function tampilpesan (nama) { alert('halo' + nama);</p>
+        <p style="color: rgb(11, 203, 11);">tampilpesan('sandika')</p>
+        <br>
+        <h3>Benar</h3>
+        <p style="color: rgb(255, 0, 43);">tampilpesan('sandika')</p>
+        <p style="color: blue;">Function tampilpesan (nama) { alert('halo' + nama);</p>
+        
+        <br><br>
+        <h1>Function expression</h1>
+        <ul>
+            <li>
+                Harus didefinisikan terlebih dahulu sebelum dipanggil
+            </li>
+            <li>
+                Lebih powerfull:
+                <ul>
+                    <li> <b> Sebagai closure</b></li>
+                    <li> <b>Sebagai argumen untuk Function lain</b> </li>
+                    <li> <b>IIFE (Immediately Invoked Function Expression</b> </li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Contoh</h2>
+        usahakan kalau memakai Function expression selalu tulis dulu deveninya baru panggil
+        <h3>Benar</h3>
+        <p style="color: rgb(14, 14, 212);">  Function tampilpesan (nama) { alert('halo' + nama);</p>
+        <p style="color: rgb(11, 203, 11);">tampilpesan('sandika')</p>
+        <br>
+        <h3>Error</h3>
+        <p style="color: rgb(235, 141, 0);">tampilpesan('sandika')</p>
+        <p style="color: rgb(234, 0, 0);">Function tampilpesan (nama) { alert('halo' + nama);</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
